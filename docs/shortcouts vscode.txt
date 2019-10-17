@@ -1,0 +1,5 @@
+atajos vscode
+#duplica una linea hacia abajo 
+Ctrl + c y Ctrl + v
+#Construye varios cursores
+shift + Alt +ArrowDown or shift + Alt +ArrowUp or shift + Alt +click cursor

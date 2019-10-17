@@ -7,6 +7,15 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
+// ROUTES
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+
+// HTTP
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +25,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, { useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

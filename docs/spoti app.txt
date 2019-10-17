@@ -1,0 +1,15 @@
+#use Hash
+Si nosotros quisieramos paginar nuestra aplicacion de angular con # osea links dentro de la misma pagina usamos en el metodo RouterModule.forRoot(ROUTES, { useHash: true}) para habilitar este modo de paginación
+
+#peticiones HTTP
+Para realizar peticiones a otros servidores necesitamos importar en app.module.ts 
+import { HttpClientModule } from '@angular/common/http';
+y agregarlo a imports[]
+
+Despues en algun service importamos 
+import { HttpClient } from '@angular/common/http'; 
+Y creamos una variable en nuestro constructor de tipo HttpCiente
+para ejecutar una peticion :
+this.http.get('url');
+Esto solo prepara la url para que alguien se suscriba y obtenga los datos
+podemos asociar al final los resultados obtenidos con un objeto propio del componente
