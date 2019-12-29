@@ -14,6 +14,10 @@ import { ROUTES } from './app.routes';
 // HTTP
 import { HttpClientModule } from '@angular/common/http';
 
+// Services
+import { SpotifyService } from './services/spotify.service';
+import { NoimagePipe } from './pipes/noimage.pipe';
+
 
 
 @NgModule({
@@ -22,14 +26,17 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ArtistaComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true})
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

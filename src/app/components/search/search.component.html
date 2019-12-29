@@ -1,1 +1,19 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <input #terminoBusqueda (keyup)="buscar(terminoBusqueda.value)" type="text" class="form-control" placeholder="Buscar Artista">
+    </div>
+    <div class="col-md-6">
+        <!-- <h4>Results of:" <span>{{ termino }}</span>"</h4> -->
+    </div>
+</div>
+
+<div class="card-columns mt-5">
+    <div *ngFor="let artist of artistas;" class="card">
+        <img class="card-img-top" [src]="artist.images | noimage" alt="Card image cap">
+        <!-- <img class="card-img-top" src="assets/img/noimage.png" alt="Card image cap"> -->
+        <div class="card-body">
+            <h5 class="card-title">{{ artist.name }}</h5>
+
+        </div>
+    </div>
+</div>

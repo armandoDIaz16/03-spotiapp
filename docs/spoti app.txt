@@ -13,3 +13,6 @@ para ejecutar una peticion :
 this.http.get('url');
 Esto solo prepara la url para que alguien se suscriba y obtenga los datos
 podemos asociar al final los resultados obtenidos con un objeto propio del componente
+
+Client ID 9911b0b08daa4e2cb8911044a36ae943
+Client Secret 80119a325e584e2881f237fa53055e18 

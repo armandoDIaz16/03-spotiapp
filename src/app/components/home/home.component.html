@@ -17,3 +17,12 @@
 
     </tbody>
 </table> -->
+<div class="card-columns">
+    <div *ngFor="let nuevoLanzamiento of nuevosLanzamientos;" class="card">
+        <img class="card-img-top" [src]="nuevoLanzamiento.images | noimage" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ nuevoLanzamiento.name }}</h5>
+            <span *ngFor="let artist of nuevoLanzamiento.artists;" class="badge badge-pill badge-secondary">{{ artist.name }}</span>
+        </div>
+    </div>
+</div>
